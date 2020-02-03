@@ -13,22 +13,13 @@
 </head>
 <body>
 
-    <div class="main-nav-container">
+    <div class="navigation pure-menu pure-menu-horizontal">
+        <a href="https://tengshan2008.github.io/" class="pure-menu-heading  pure-menu-link">Personal Blog</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"></li>
 
-        <div class="pure-g">
-            <div class="pure-u-1 pure-u-lg-2-3">
-                <div class="main-nav">
-                    <ul class="main-nav-list">
-                        <li class="main-nav-item"><a href="https://tengshan2008.github.io/" class="pure-menu-link">Personal Blog</a></li>
-
-                        <li class="main-nav-item active"><a href="https://tengshan2008.github.io/category/default.html" class="pure-menu-link">Default</a></li>
-                    </ul>
-                </div>
-             </div>
-
-             <div class="pure-u-1 pure-u-lg-1-3"></div>
-        </div>
-
+            <li class="pure-menu-item pure-menu-selected"><a href="https://tengshan2008.github.io/category/default.html" class="pure-menu-link">Default</a></li>
+        </ul>
     </div>
 
 
@@ -36,15 +27,14 @@
     <div class="entry-content">
         <div class="post-meta pure-g">
             <div class="pure-u">
-                <img src="https://raw.githubusercontent.com/tengshan2008/tengshan2008.github.io/master/images/article-line.png " class="post-avatar" alt="Default">
+                <a href="https://tengshan2008.github.io/category/default.html"><img src="https://raw.githubusercontent.com/tengshan2008/tengshan2008.github.io/master/images/article-line.png " class="post-avatar" alt="Default"></a>
             </div>
-            <div class="pure-u-3-4 meta-data">
-                <a href="https://tengshan2008.github.io/category/default.html" class="category">Default</a><br />
+<div class="pure-u-3-4 meta-data">
+    <a href="https://tengshan2008.github.io/category/default.html" class="category">Default</a><br />
 
-                <a class="author" href="https://tengshan2008.github.io/author/master.html">Master</a>
-                &mdash; <abbr title="2019-01-02T10:55:00+08:00">2019-01-02 星期三</abbr>
-            </div>
-        </div>
+    <a class="author" href="https://tengshan2008.github.io/author/master.html">Master</a>
+    &mdash; <abbr title="2020-01-02T00:00:00+08:00">四 02 一月 2020</abbr>
+</div>        </div>
     </div>
 
     <div class="article-header-container">
@@ -64,31 +54,8 @@
     <div class="entry-content">
         <h1>Pelican</h1>
 <p>Pelican 是一种静态博客生成器，包含大量丰富的主题，拥有简单的部署方法。</p>
-<ul>
-<li><a href="#pelican">Pelican</a></li>
-<li><a href="#1-%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c">1 准备工作</a></li>
-<li><a href="#2-%e5%ae%89%e8%a3%85">2 安装</a><ul>
-<li><a href="#21-%e6%96%b0%e5%bb%ba-python-%e8%99%9a%e6%8b%9f%e7%8e%af%e5%a2%83">2.1 新建 python 虚拟环境</a></li>
-<li><a href="#22-%e5%ae%89%e8%a3%85%e5%bf%85%e8%a6%81%e7%9a%84-python-%e5%8c%85">2.2 安装必要的 python 包</a></li>
-</ul>
-</li>
-<li><a href="#3-%e9%85%8d%e7%bd%ae">3 配置</a><ul>
-<li><a href="#31-%e6%96%b0%e5%bb%ba-pelican-%e9%a1%b9%e7%9b%ae">3.1 新建 pelican 项目</a></li>
-<li><a href="#32-%e5%a1%ab%e5%86%99%e5%bf%85%e8%a6%81%e4%bf%a1%e6%81%af">3.2 填写必要信息</a></li>
-<li><a href="#33-%e5%ae%89%e8%a3%85%e4%b8%bb%e9%a2%98">3.3 安装主题</a></li>
-</ul>
-</li>
-<li><a href="#4-%e5%88%9b%e5%bb%ba%e5%86%85%e5%ae%b9">4 创建内容</a></li>
-<li><a href="#5-%e8%b0%83%e8%af%95%e4%b8%8e%e9%83%a8%e7%bd%b2">5 调试与部署</a><ul>
-<li><a href="#51-%e6%9c%ac%e5%9c%b0%e8%b0%83%e8%af%95">5.1 本地调试</a></li>
-<li><a href="#52-%e9%83%a8%e7%bd%b2%e5%9c%a8-github-pages-%e4%b8%8a">5.2 部署在 GitHub Pages 上</a></li>
-</ul>
-</li>
-<li><a href="#%e5%8f%82%e8%80%83">6 参考</a></li>
-</ul>
-<h2>1 准备工作</h2>
-<p>为了发布在 GitHub Page 上，需要先新建一个远程仓库 <code>username.github.io</code></p>
-<p>将该仓库克隆到本地</p>
+<h2>1. 准备工作</h2>
+<p>为了发布在 GitHub Page 上，需要先新建一个远程仓库 username.github.io 并将该仓库克隆到本地。</p>
 <div class="highlight"><pre><span></span>git clone https://github.com/<span class="o">{</span>username<span class="o">}</span>/<span class="o">{</span>username<span class="o">}</span>.github.io.git blog
 </pre></div>
 
@@ -98,7 +65,7 @@
 </pre></div>
 
 
-<h2>2 安装</h2>
+<h2>2. 安装</h2>
 <h3>2.1 新建 python 虚拟环境</h3>
 <div class="highlight"><pre><span></span><span class="nb">cd</span> blog
 
@@ -188,7 +155,7 @@ python -m venv .venv
 </tr>
 </tbody>
 </table>
-<h2>3 配置</h2>
+<h2>3. 配置</h2>
 <h3>3.1 新建 pelican 项目</h3>
 <div class="highlight"><pre><span></span>pelican-quickstart
 </pre></div>
@@ -251,7 +218,7 @@ pelican-themes --install themes/medius
 </pre></div>
 
 
-<h2>4 创建内容</h2>
+<h2>4. 创建内容</h2>
 <p>在 content 目录下，存放博客文章及各类资源。</p>
 <div class="highlight"><pre><span></span><span class="err">website</span>
 <span class="err">├── content</span>
@@ -277,7 +244,7 @@ pelican-themes --install themes/medius
 
 
 <p>编辑内容参照本博客文章自身。</p>
-<h2>5 调试与部署</h2>
+<h2>5. 调试与部署</h2>
 <h3>5.1 本地调试</h3>
 <div class="highlight"><pre><span></span><span class="nb">source</span> .venv/bin/activate
 
@@ -285,9 +252,8 @@ make html <span class="o">&amp;&amp;</span> make serve
 </pre></div>
 
 
-<p>本地服务启用，访问 <code>http://localhost:8000</code></p>
-<p>若是需要</p>
-<p>提交所有内容</p>
+<p>本地服务启用，访问 <a href="http://localhost:8000">http://localhost:8000</a></p>
+<p>若是需要，提交所有内容。</p>
 <div class="highlight"><pre><span></span>git add -A <span class="o">&amp;&amp;</span> git commit -a -m <span class="s1">&#39;initial commit&#39;</span> <span class="o">&amp;&amp;</span> git push --all
 </pre></div>
 
@@ -299,25 +265,24 @@ make github
 </pre></div>
 
 
-<h2>6 参考</h2>
-<p><a href="https://a-slide.github.io/blog/github-pelican">Create a github hosted Pelican blog with a Bootstrap3 theme</a></p>
-<p><a href="https://snipcart.com/blog/pelican-blog-tutorial-search-comments">A Pelican Tutorial: Static, Python-Powered Blog with Search &amp; Comments</a></p>
+<h2>6. 参考</h2>
+<ol>
+<li><a href="https://a-slide.github.io/blog/github-pelican">Create a github hosted Pelican blog with a Bootstrap3 theme</a></li>
+<li><a href="https://snipcart.com/blog/pelican-blog-tutorial-search-comments">A Pelican Tutorial: Static, Python-Powered Blog with Search &amp; Comments</a></li>
+</ol>
     </div>
 
     <footer>
         <div class="tags">
-            <a href="https://tengshan2008.github.io/tag/blog.html">Blog</a>
+            <a href="https://tengshan2008.github.io/tag/pelican.html">pelican</a>
+            <a href="https://tengshan2008.github.io/tag/blog.html">blog</a>
         </div>
         <div class="pure-g post-footer">
             <div class="pure-u-1 pure-u-md-1-2">
                 <div class="pure-g poster-info">
-                    <div class="pure-u">
-                        <img src="https://raw.githubusercontent.com/tengshan2008/tengshan2008.github.io/master/images/author.jpg" alt="">
-                    </div>
                     <div class="pure-u-3-4">
                         <h3 class="author-name"><a href="https://tengshan2008.github.io/author/master.html">Master</a></h3>
                         <p class="author-description">
-                          这个人很懒，什么都没有写。
                         </p>
                     </div>
                 </div>
@@ -328,12 +293,12 @@ make github
 
                 <div class="pure-g post-category-info">
                     <div class="pure-u">
-                        <img src="https://raw.githubusercontent.com/tengshan2008/tengshan2008.github.io/master/images/article-line.png" alt="">
+                        <a href="https://tengshan2008.github.io/category/default.html"><img src="https://raw.githubusercontent.com/tengshan2008/tengshan2008.github.io/master/images/article-line.png" alt=""></a>
                     </div>
                     <div class="pure-u-3-4">
                         <h3 class="author-name"><a href="https://tengshan2008.github.io/category/default.html">Default</a></h3>
                         <p class="author-description">
-                          默认分类
+                          默认文章
                         </p>
                     </div>
                 </div>
@@ -348,6 +313,17 @@ make github
 
 </div>
 
+
+
+    <footer class="index-footer">
+
+        <a href="https://tengshan2008.github.io/" title="Personal Blog">Personal Blog</a>
+        <a href="https://tengshan2008.github.io/category/default.html">Default</a>
+        <a href="http://getpelican.com/">Pelican</a>
+        <a href="http://python.org/">Python.org</a>
+        <a href="http://jinja.pocoo.org/">Jinja2</a>
+
+    </footer>
 
 </body>
 </html>
